@@ -13,7 +13,7 @@ namespace projetoAPIS.Utils
         {
             MailMessage objMail = new MailMessage();
             objMail.To.Add(emailDestiny);
-            objMail.From = new MailAddress("yanborges125@gmail.com");
+            objMail.From = new MailAddress(""); // Email 
             objMail.Body = bodyMail;
             objMail.Subject = Assunto;
 
@@ -21,7 +21,7 @@ namespace projetoAPIS.Utils
             objSMTP.Host = "smtp.gmail.com";
             objSMTP.Port = 587;
             objSMTP.UseDefaultCredentials = false;
-            objSMTP.Credentials = new NetworkCredential("yandotnetasp@gmail.com", "Yanlima11");
+            objSMTP.Credentials = new NetworkCredential("", ""); //Email e Senha
             objSMTP.EnableSsl = true;
             objSMTP.Send(objMail);
 
